@@ -45,22 +45,26 @@ function testAdapter(callback: any) {
   try {
 
     // contains secure info; store in parent folder of this project, outside of repo
-    let configObj = require('../../mysql-settings.json')
+    //let configObj = require('../../mysql-settings.json')
 
-    /* 
+    
     let configObj = 
     // mysql-settings.json should look like this: 
     {
       "sql": "SELECT * FROM customers LIMIT 2;",
       "connection": {
-        "host"     : "example.org",
-        "user"     : "bob",
-        "password" : "secret",
-        "database" : "schemaName"
+        "host": "206.189.166.26",
+        "user": "ginpro_remote",
+        "password": "Terry Book Cow?",
+        "database": "Quarterway2018"
+      },
+      "bookmarkProp": "CurrentTime",
+      "bookmarks": {
+        "last_entry": "2017-06-25T20:56:56.000Z"
       }
     }
     
-    */
+    
 
   return tapMysql.src('mysqlResults',configObj)
     .pipe(errorHandler(function(err:any) {
